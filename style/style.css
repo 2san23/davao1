@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+body{
+    text-align: center;
+}
+
+/* Header css */
+.header{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    background: #0b3d2e;
+    padding: 10px 20px;
+    color: white;
+    position: relative;
+    text-align: center;
+}
+.logo{
+    width: 90px;
+}
+.header h1{
+    font-size: 30px;
+    margin-top: 30px;
+    color: skyblue;
+}
+
+/* navbar css */
+.navbar ul{
+    list-style-type: none;
+    display: flex;
+}
+.navbar ul li{
+    position: relative;
+}
+.navbar ul li a{
+    display: block;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.navbar ul li a:hover{
+    background-color: grey;
+    border-radius: 20px;
+}
+.type{
+    height: 100vh;
+    background-image: url("../images/davao.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.his h1{
+    margin: 40px;
+    font-size: 50px;
+}
+.his h4{
+    font-size: 20px;
+}
+.his h2{
+    font-size: 30px;
+}
+.his li{
+    font-size: 20px;
+}
+.his ul{
+    margin: 20px;
+}
+.his p{
+    margin: 20px;
+    font-size: 20px;
+}
+
+.pagination{
+    margin: 60px;
+
+}
+.pagination a{
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+}
+.pagination a:hover{
+    background-color: grey;
+    border-radius: 30px;
+}
+.pagination a.active{
+    background-color: #009ccf;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer{
+    background-color: #0b3d2e;
+    padding: 30px;
+    color: skyblue;
+}
+
+.cimg{
+    background-color: lightblue;
+    padding: 2rem;
+    border-radius: 50px;
+}
+.desc {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin: 2rem 0;
+  padding: 1rem;
+  border-radius: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.9);
+}
+.desc.left {
+  flex-direction: row;
+}
+.desc.right {
+  flex-direction: row-reverse;
+}
+
+/* tourism */
+.tourism{
+    width: 300px;
+    margin: 30px;
+    display: inline-block;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.5s;
+}
+.tourism:hover{
+    transform: scale(1.2);
+}
+.tourism img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.description{
+    padding: 20px;
+    text-align: center;
+    background: #f4f4f4;
+}
+.timg{
+    width: 500px;
+    height: auto;
+}
+.tourism-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* ========================= */
+/* 📱 MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .header h1 {
+    margin: 10px 0;
+    font-size: 22px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  /* NAVBAR */
+  .navbar ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar ul li {
+    width: 100%;
+  }
+
+  .navbar ul li a {
+    padding: 12px;
+    border-top: 1px solid #444;
+  }
+
+  /* HERO IMAGE */
+  .type {
+    height: 60vh; /* smaller for mobile */
+  }
+
+  /* HISTORY TEXT */
+  .his h1 {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  .his h2 {
+    font-size: 22px;
+  }
+
+  .his h4 {
+    font-size: 16px;
+  }
+
+  .his p,
+  .his li {
+    font-size: 16px;
+  }
+
+  /* DESC SECTION */
+  .desc {
+    flex-direction: column !important; /* override left/right */
+    text-align: center;
+  }
+
+  /* TOURISM CARDS */
+  .tourism {
+    width: 90%;
+    margin: 15px 0;
+  }
+
+  .tourism:hover {
+    transform: scale(1.05); /* reduce zoom on mobile */
+  }
+
+  .tourism img {
+    height: 180px;
+  }
+
+  /* IMAGE */
+  .timg {
+    width: 100%;
+  }
+
+  /* PAGINATION */
+  .pagination a {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
